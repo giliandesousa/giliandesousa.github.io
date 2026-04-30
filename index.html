@@ -1,16 +1,267 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <title>Entertyou Online</title>
-    <!-- Redirecionamento para o seu site real -->
-    <meta http-equiv="refresh" content="0;URL='https://www.entertyou.online/'" />
-    <link rel="canonical" href="https://www.entertyou.online/" />
-    <script type="text/javascript">
-      window.location.href = "https://www.entertyou.online/"
+<head>
+    <!-- SCRIPTS DE MONETIZAÇÃO E ANALYTICS (SEUS ORIGINAIS) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2308397098605921" crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-2308397098605921">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-16LZSD8LH7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-16LZSD8LH7');
     </script>
-  </head>
-  <body>
-    <p>Redirecionando para <a href="https://www.entertyou.online/">entertyou.online</a>...</p>
-  </body>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeGuia News | Inteligência em Seguros e Proteção</title>
+    <meta name="description" content="Portal especializado em seguros de alto nível, tecnologia e finanças. Informação de qualidade para proteger seu patrimônio.">
+
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 3px solid #00aaff;
+            box-shadow: 0 2px 10px rgba(0,170,255,0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: bold;
+            color: #00aaff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: #111;
+            padding: 15px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background: #00aaff;
+            color: #000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+        .section-title {
+            font-size: 28px;
+            color: #00aaff;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #00aaff;
+            padding-bottom: 10px;
+        }
+        .card {
+            background: #1a1a1a;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            cursor: pointer;
+            border: 1px solid #333;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #00aaff;
+        }
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .card-content { padding: 25px; }
+        .category-badge {
+            background: #00aaff;
+            color: #000;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .card h2 { color: #00aaff; margin: 0 0 15px 0; font-size: 24px; }
+        .ad-box {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            border: 1px dashed #444;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .article-full { background: #1a1a1a; padding: 30px; border-radius: 12px; }
+        .back-button {
+            display: inline-block;
+            background: #00aaff;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        footer {
+            background: #000;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 3px solid #00aaff;
+        }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 onclick="showHome()">SafeGuia News</h1>
+    <p style="color: #b0b0b0; font-size: 14px; margin-top: 5px;">Inteligência em Proteção e Seguros</p>
+</header>
+
+<nav>
+    <a onclick="showHome()">Home</a>
+    <a onclick="filterByCategory('auto')">Seguro Auto</a>
+    <a onclick="filterByCategory('ciber')">Cibersegurança</a>
+    <a onclick="filterByCategory('saude')">Saúde</a>
+    <a onclick="filterByCategory('vida')">Vida e Finanças</a>
+</nav>
+
+<div class="container" id="home-section">
+    <!-- ANÚNCIO TOPO -->
+    <div class="ad-box">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2308397098605921" data-ad-slot="7122722441" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <h2 class="section-title">Análises em Destaque</h2>
+
+    <!-- NOTÍCIA 1 - SEGURO AUTO -->
+    <div class="card" data-category="auto" onclick="showArticle(1)">
+        <img src="https://images.unsplash.com/photo-1533558701576-23c65e0272fb?w=1080" alt="Seguro Auto">
+        <div class="card-content">
+            <span class="category-badge">SEGURO AUTO</span>
+            <h2>Seguro para Carros Elétricos: Por que o prêmio é mais caro?</h2>
+            <p>Em 2026, a bateria representa 40% do custo do veículo. Entenda como as seguradoras precificam o risco de sinistro em veículos híbridos e elétricos.</p>
+        </div>
+    </div>
+
+    <!-- ANÚNCIO MEIO -->
+    <div class="ad-box">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2308397098605921" data-ad-slot="7122722441" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- NOTÍCIA 2 - CIBER -->
+    <div class="card" data-category="ciber" onclick="showArticle(2)">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1080" alt="Cibersegurança">
+        <div class="card-content">
+            <span class="category-badge">CIBERSEGURANÇA</span>
+            <h2>O Seguro de Responsabilidade Civil para Profissionais Digitais</h2>
+            <p>Trabalha com dados de terceiros? Descubra como o seguro cibernético protege seu patrimônio contra ataques de ransomware e vazamentos de dados.</p>
+        </div>
+    </div>
+
+    <!-- NOTÍCIA 3 - SAÚDE -->
+    <div class="card" data-category="saude" onclick="showArticle(3)">
+        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1080" alt="Saúde">
+        <div class="card-content">
+            <span class="category-badge">SAÚDE</span>
+            <h2>Planos de Saúde em 2026: Coparticipação vale a pena?</h2>
+            <p>Analisamos os novos modelos de contratos de saúde. Saiba quando escolher a coparticipação para reduzir o custo fixo mensal da sua proteção familiar.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const articles = {
+        1: {
+            title: "Seguro para Carros Elétricos: O Guia Completo",
+            category: "SEGURO AUTO",
+            content: "<p>Com a explosão da frota elétrica em 2026, o mercado de seguros precisou se adaptar. O custo de reparo de um pack de baterias após uma colisão frontal pode ultrapassar o valor de mercado de muitos carros populares.</p><h3>Principais Diferenças</h3><p>As apólices agora incluem cobertura para o cabo de carregamento e para o Wallbox residencial contra danos elétricos ou roubo. Além disso, o guincho para carros elétricos exige cuidados especiais para não danificar os motores magnéticos.</p>"
+        },
+        2: {
+            title: "Cibersegurança: Protegendo sua Operação Digital",
+            category: "CIBERSEGURANÇA",
+            content: "<p>O seguro cibernético não é mais apenas para grandes corporações. Em 2026, médicos, advogados e contadores são alvos frequentes de sequestro de dados.</p><h3>O que está coberto?</h3><p>Uma apólice de alto nível cobre investigação forense, custos de notificação de vítimas e multas da LGPD, além da recuperação de sistemas e lucros cessantes enquanto sua empresa está parada.</p>"
+        },
+        3: {
+            title: "Estratégias de Saúde: Planos Individuais vs Coletivos",
+            category: "SAÚDE",
+            content: "<p>Os planos de saúde atingiram recordes de reajuste. A tendência de 2026 são os planos focados em atenção primária e redes verticalizadas.</p><h3>Veredito</h3><p>Para quem busca previsibilidade, o plano individual com coparticipação em exames complexos tem se mostrado a opção mais sustentável a longo prazo para o orçamento familiar.</p>"
+        }
+    };
+
+    function showHome() {
+        document.getElementById('home-section').classList.remove('hidden');
+        document.querySelectorAll('.article-page').forEach(e => e.remove());
+        window.scrollTo(0,0);
+    }
+
+    function showArticle(id) {
+        const art = articles[id];
+        document.getElementById('home-section').classList.add('hidden');
+        
+        const page = document.createElement('div');
+        page.className = 'container article-page';
+        page.innerHTML = `
+            <div class="back-button" onclick="showHome()">← Voltar</div>
+            <div class="article-full">
+                <span class="category-badge">${art.category}</span>
+                <h1>${art.title}</h1>
+                <div style="margin-top:20px">${art.content}</div>
+                <div class="ad-box">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2308397098605921" data-ad-slot="7122722441" data-ad-format="auto"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>
+                </div>
+            </div>
+        `;
+        document.body.insertBefore(page, document.querySelector('footer'));
+        window.scrollTo(0,0);
+    }
+
+    function filterByCategory(cat) {
+        showHome();
+        document.querySelectorAll('.card').forEach(c => {
+            c.style.display = (cat === 'all' || c.dataset.category === cat) ? 'block' : 'none';
+        });
+    }
+</script>
+
+<footer>
+    <div style="margin-bottom: 20px;">
+        <a href="#">Sobre</a> | <a href="#">Contato</a> | <a href="#">Privacidade</a> | <a href="#">Termos</a>
+    </div>
+    <p>&copy; 2026 SafeGuia News - Entertyou Online. Todos os direitos reservados.</p>
+</footer>
+
+</body>
 </html>
