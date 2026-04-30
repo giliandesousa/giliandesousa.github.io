@@ -1,208 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- SCRIPTS DE MONETIZAÇÃO E ANALYTICS -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2308397098605921" crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-2308397098605921">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-16LZSD8LH7"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-16LZSD8LH7');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeGuia News | Inteligência em Seguros</title>
-    
+    <title>SafeGuia News | Conteúdo Real</title>
     <style>
-        * { box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        header {
-            background: #000;
-            padding: 30px 20px;
-            text-align: center;
-            border-bottom: 3px solid #00aaff;
-        }
-        header h1 {
-            margin: 0;
-            color: #00aaff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 28px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #111;
-            padding: 10px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        nav button {
-            background: transparent;
-            border: 1px solid #00aaff;
-            color: #00aaff;
-            padding: 8px 15px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        nav button:hover {
-            background: #00aaff;
-            color: #000;
-        }
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .card {
-            background: #161616;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 25px;
-            border: 1px solid #222;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .card:hover {
-            border-color: #00aaff;
-            transform: translateY(-3px);
-        }
-        .card h2 {
-            color: #00aaff;
-            margin-top: 0;
-            font-size: 22px;
-        }
-        .category-badge {
-            font-size: 11px;
-            background: #00aaff;
-            color: #000;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        .ad-placeholder {
-            background: #111;
-            border: 1px dashed #333;
-            padding: 15px;
-            text-align: center;
-            margin: 20px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 40px;
-            border-top: 1px solid #222;
-            font-size: 13px;
-            color: #666;
-        }
-        .hidden { display: none !important; }
-        #article-content {
-            background: #161616;
-            padding: 30px;
-            border-radius: 12px;
-        }
+        body { background: #0a0a0a; color: #00aaff; font-family: sans-serif; text-align: center; padding: 50px; }
+        .box { border: 2px solid #00aaff; padding: 20px; border-radius: 15px; display: inline-block; }
+        h1 { text-transform: uppercase; }
+        p { color: #ccc; }
     </style>
 </head>
 <body>
+    <div class="box">
+        <h1>Site em Manutenção</h1>
+        <p>Estamos carregando o novo portal de seguros.</p>
+        <p>Aguarde, o conteúdo aparecerá aqui em instantes.</p>
+    </div>
 
-<header>
-    <h1>SafeGuia News</h1>
-    <p style="font-size: 13px; color: #888;">Informação de Alto Nível em Seguros</p>
-</header>
-
-<nav>
-    <button onclick="showHome()">Home</button>
-    <button onclick="alert('Conteúdo em breve')">Seguro Auto</button>
-    <button onclick="alert('Conteúdo em breve')">Cibersegurança</button>
-</nav>
-
-<div class="container" id="main-view">
-    <!-- ANÚNCIO TOPO -->
-    <div class="ad-placeholder">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2308397098605921" data-ad-slot="7122722441" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <!-- Seu Bloco de Anúncio -->
+    <div style="margin-top: 20px;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2308397098605921"
+             data-ad-slot="7122722441"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-
-    <div id="home-posts">
-        <!-- POST 1 -->
-        <div class="card" onclick="openArticle('auto')">
-            <span class="category-badge">AUTO</span>
-            <h2>Seguro de Carros Elétricos 2026: Guia de Custos</h2>
-            <p>Entenda por que as baterias estão mudando o preço das apólices e como economizar.</p>
-        </div>
-
-        <!-- POST 2 -->
-        <div class="card" onclick="openArticle('ciber')">
-            <span class="category-badge">TECNOLOGIA</span>
-            <h2>O Seguro Cibernético para Profissionais Liberais</h2>
-            <p>Sua operação digital está protegida contra vazamento de dados? Veja as tendências.</p>
-        </div>
-    </div>
-
-    <!-- POST COMPLETO (ESCONDIDO POR PADRÃO) -->
-    <div id="article-view" class="hidden">
-        <button onclick="showHome()" style="background:#333; color:#fff; border:none; padding:10px; cursor:pointer; margin-bottom:20px; border-radius:5px;">← Voltar</button>
-        <div id="article-content">
-            <!-- Conteúdo injetado via JS -->
-        </div>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2026 SafeGuia News - Entertyou Online</p>
-    <p>Ads.txt Verificado | ca-pub-2308397098605921</p>
-</footer>
-
-<script>
-    const content = {
-        auto: {
-            title: "Seguro de Carros Elétricos 2026",
-            text: "<p>Em 2026, os carros elétricos dominam as ruas. No entanto, o seguro continua sendo um desafio. O custo de reposição de baterias representa cerca de 45% do valor do veículo em caso de colisão severa.</p><p>As melhores apólices hoje incluem cobertura para o cabo de recarga e o Wallbox residencial.</p>"
-        },
-        ciber: {
-            title: "Seguro Cibernético em Foco",
-            text: "<p>Para quem trabalha em regime de home office ou possui consultórios, o seguro cibernético tornou-se indispensável. Ele cobre investigações de TI, multas da LGPD e lucros cessantes.</p>"
-        }
-    };
-
-    function openArticle(key) {
-        const art = content[key];
-        document.getElementById('home-posts').classList.add('hidden');
-        document.getElementById('article-view').classList.remove('hidden');
-        document.getElementById('article-content').innerHTML = `
-            <h1 style="color:#00aaff">${art.title}</h1>
-            <div>${art.text}</div>
-            <div class="ad-placeholder">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2308397098605921" data-ad-slot="7122722441" data-ad-format="auto"></ins>
-            </div>
-        `;
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        window.scrollTo(0,0);
-    }
-
-    function showHome() {
-        document.getElementById('home-posts').classList.remove('hidden');
-        document.getElementById('article-view').classList.add('hidden');
-        window.scrollTo(0,0);
-    }
-</script>
-
 </body>
 </html>
