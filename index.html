@@ -1,33 +1,219 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- SCRIPTS DE MONETIZAÇÃO E ANALYTICS (SEUS ORIGINAIS) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2308397098605921" crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-2308397098605921">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-16LZSD8LH7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-16LZSD8LH7');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeGuia News | Conteúdo Real</title>
+    <title>Entertyou News | Inteligência e Seguros</title>
+    <meta name="description" content="Portal de notícias sobre tecnologia, finanças e seguros de alto nível.">
+
     <style>
-        body { background: #0a0a0a; color: #00aaff; font-family: sans-serif; text-align: center; padding: 50px; }
-        .box { border: 2px solid #00aaff; padding: 20px; border-radius: 15px; display: inline-block; }
-        h1 { text-transform: uppercase; }
-        p { color: #ccc; }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 3px solid #00aaff;
+            box-shadow: 0 2px 10px rgba(0,170,255,0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #00aaff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: #111;
+            padding: 15px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav a:hover { background: #00aaff; color: #000; }
+        .container { max-width: 1200px; margin: auto; padding: 30px 20px; }
+        .section-title { font-size: 28px; color: #00aaff; margin-bottom: 25px; border-bottom: 2px solid #00aaff; padding-bottom: 10px; }
+        .card {
+            background: #1a1a1a;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            cursor: pointer;
+            border: 1px solid #333;
+        }
+        .card:hover { transform: translateY(-5px); border-color: #00aaff; }
+        .card img { width: 100%; height: 300px; object-fit: cover; display: block; }
+        .card-content { padding: 25px; }
+        .category-badge {
+            background: #00aaff;
+            color: #000;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .card h2 { color: #00aaff; margin: 0 0 15px 0; font-size: 24px; }
+        .ad-placeholder { background: #111; padding: 20px; text-align: center; border: 1px dashed #444; margin: 20px 0; }
+        .article-full { background: #1a1a1a; padding: 30px; border-radius: 12px; }
+        .back-button { display: inline-block; background: #00aaff; color: #000; padding: 10px 20px; border-radius: 5px; margin-bottom: 20px; cursor: pointer; font-weight: bold; }
+        footer { background: #000; padding: 40px 20px; text-align: center; margin-top: 50px; border-top: 3px solid #00aaff; }
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Site em Manutenção</h1>
-        <p>Estamos carregando o novo portal de seguros.</p>
-        <p>Aguarde, o conteúdo aparecerá aqui em instantes.</p>
-    </div>
 
-    <!-- Seu Bloco de Anúncio -->
-    <div style="margin-top: 20px;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2308397098605921"
-             data-ad-slot="7122722441"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
+<header>
+    <h1 onclick="showHome()">Entertyou News</h1>
+    <p style="color: #b0b0b0; font-size: 14px;">Informação de Qualidade e Proteção Patrimonial</p>
+</header>
+
+<nav>
+    <a onclick="showHome()">Home</a>
+    <a onclick="filterByCategory('seguros')">Seguros</a>
+    <a onclick="filterByCategory('tecnologia')">Tecnologia</a>
+    <a onclick="filterByCategory('financas')">Finanças</a>
+</nav>
+
+<div class="container" id="home-section">
+    <!-- ANÚNCIO TOPO -->
+    <div class="ad-placeholder">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2308397098605921" data-ad-slot="7122722441" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
+
+    <h2 class="section-title">Destaques do Dia</h2>
+
+    <div id="posts-container">
+        <!-- Card 1: Seguros (Alto CPC) -->
+        <div class="card" data-category="seguros" onclick="showArticle(1)">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1080" alt="Seguros">
+            <div class="card-content">
+                <span class="category-badge">SEGUROS</span>
+                <h2>Seguro de Carros Elétricos: O que muda em 2026?</h2>
+                <p>Entenda por que a tecnologia das baterias está impactando o valor das apólices e como escolher a melhor cobertura.</p>
+            </div>
+        </div>
+
+        <!-- Card 2: Cibersegurança -->
+        <div class="card" data-category="tecnologia" onclick="showArticle(2)">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1080" alt="Cibersegurança">
+            <div class="card-content">
+                <span class="category-badge">TECNOLOGIA</span>
+                <h2>Responsabilidade Civil Digital e Seguro Cibernético</h2>
+                <p>Como proteger sua empresa e dados de clientes contra as novas ameaças digitais em escala global.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container hidden" id="article-section">
+    <div class="back-button" onclick="showHome()">← Voltar para Home</div>
+    <div id="article-content" class="article-full"></div>
+</div>
+
+<script>
+    const articles = {
+        1: {
+            title: "Seguro de Carros Elétricos: O que muda em 2026?",
+            category: "SEGUROS",
+            content: `
+                <p>O mercado de veículos elétricos atingiu um novo patamar em 2026. No entanto, o custo do seguro ainda gera dúvidas. Como a bateria representa quase 50% do valor do veículo, qualquer dano nessa área pode significar perda total.</p>
+                <h3>Coberturas Essenciais</h3>
+                <p>Hoje, as seguradoras oferecem proteções específicas para o cabo de carregamento e para o Wallbox instalado em sua residência, além de assistência técnica especializada em motores elétricos.</p>
+            `
+        },
+        2: {
+            title: "Responsabilidade Civil Digital e Seguro Cibernético",
+            category: "TECNOLOGIA",
+            content: `
+                <p>Trabalhar com dados exige responsabilidade. O seguro cibernético cobre desde a investigação de invasões até as multas aplicadas por órgãos reguladores em casos de vazamento.</p>
+                <h3>Por que investir?</h3>
+                <p>Mesmo pequenos negócios são alvos de ransomware. Ter um suporte especializado para recuperação de sistemas pode salvar sua operação de uma falha catastrófica.</p>
+            `
+        }
+    };
+
+    function showHome() {
+        document.getElementById('home-section').classList.remove('hidden');
+        document.getElementById('article-section').classList.add('hidden');
+        window.scrollTo(0,0);
+    }
+
+    function showArticle(id) {
+        const art = articles[id];
+        document.getElementById('home-section').classList.add('hidden');
+        const artSection = document.getElementById('article-section');
+        const artContent = document.getElementById('article-content');
+        
+        artContent.innerHTML = `
+            <span class="category-badge">${art.category}</span>
+            <h1 style="color:#00aaff; font-size:32px;">${art.title}</h1>
+            <div style="margin-top:20px;">${art.content}</div>
+            <div class="ad-placeholder">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2308397098605921" data-ad-slot="7122722441" data-ad-format="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>
+            </div>
+        `;
+        artSection.classList.remove('hidden');
+        window.scrollTo(0,0);
+    }
+
+    function filterByCategory(cat) {
+        showHome();
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            if (cat === 'all' || card.dataset.category === cat) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+<footer>
+    <div style="margin-bottom: 20px;">
+        <a href="#">Privacidade</a> | <a href="#">Termos</a> | <a href="#">Contato</a>
+    </div>
+    <p>&copy; 2026 Entertyou News. Todos os direitos reservados.</p>
+    <p style="font-size:12px; color:#444;">Propriedade de Entertyou Online</p>
+</footer>
+
 </body>
 </html>
